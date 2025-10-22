@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CatEars RGB — ХІТ СЕЗОНУ</title>
+  <meta name="description" content="Бездротові RGB навушники з котячими вушками — стиль, що сяє. Акція — 690 ₴. Доставка по Україні, оплата при отриманні." />
+  <style>
+    :root{
+      --bg1:#fff7f8;
+      --bg2:#fff;
+      --fg:#161616;
+      --brand:#d946ef; /* фуксія */
+      --brand-2:#06b6d4; /* бірюзовий */
+      --muted:#6b7280;
+      --card:#ffffff;
+      --border:#e5e7eb;
+      --accent:#fef3c7;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--bg1),var(--bg2));}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .topbar{background: linear-gradient(90deg,#a21caf,#ef4444,#f59e0b);color:#fff;text-align:center;padding:10px 8px;font-weight:700}
+    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;padding:48px 0}
+    .badge{display:inline-block;background:#fae8ff;color:#86198f;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
+    h1{font-size:38px;line-height:1.1;margin:16px 0 8px}
+    p.lead{font-size:18px;color:var(--muted);margin:0 0 16px}
+    .pricecard{display:flex;gap:16px;align-items:center;margin:16px 0 20px}
+    .price{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+    .price .old{color:#9ca3af;text-decoration:line-through;font-size:14px}
+    .price .new{font-size:32px;font-weight:900;color:#be185d}
+    .price .hint{font-size:12px;color:#047857}
+    ul.trust{list-style:none;padding:0;margin:0;color:var(--muted);font-size:14px}
+    ul.trust li{margin:2px 0}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;font-weight:700;text-decoration:none}
+    .btn-primary{background:#111827;color:#fff}
+    .btn-ghost{background:#fff;border:1px solid var(--border);color:#111827}
+    .hero-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:28px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+    .hero-card img{width:100%;height:auto;display:block;border-radius:16px}
+    .colors{padding:8px 0 0}
+    .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:560px}
+    .swatch{height:48px;border-radius:12px;border:1px solid var(--border);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+    .swatch.white{color:#111827;background:#fff}
+    .swatch.black{background:#000}
+    .swatch.sky{background:#38bdf8}
+    .swatch.pink{background:#ec4899}
+    .swatch.violet{background:#8b5cf6}
+    .benefits{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:28px 0}
+    .benefit{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+    .benefit h3{margin:0 0 6px;font-size:16px}
+    .benefit p{margin:0;color:var(--muted);font-size:14px}
+    .two-col{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start}
+    .card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 0}
+    .spec{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
+    .spec .k{font-size:26px;font-weight:900;color:#be185d}
+    .spec .v{font-size:12px;color:var(--muted)}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .review{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px}
+    .review .n{font-weight:800}
+    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .order{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .order input,.order select{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);font-size:14px}
+    .order .submit{width:100%;padding:12px 16px;border-radius:14px;background:#111827;color:#fff;font-weight:800}
+    footer{background:#f3f4f6;border-top:1px solid var(--border);margin-top:32px}
+    footer .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 0}
+    @media (max-width: 980px){
+      .hero,.two-col,.order{grid-template-columns:1fr}
+      .benefits{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr 1fr}
+      .faq{grid-template-columns:1fr}
+      .specs{grid-template-columns:1fr 1fr 1fr}
+    }
+    @media (max-width: 640px){
+      h1{font-size:30px}
+      .reviews,.specs{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">ХІТ СЕЗОНУ • ЗНИЖКА до −45% • Лише сьогодні</div>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <span class="badge">Новинка 2025 • RGB Cat Ears</span>
+        <h1>Бездротові навушники <br/>CatEars RGB</h1>
+        <p class="lead">Стиль, що сяє: яскраве RGB‑підсвічування, комфорт на щодень та чистий стереозвук. Ідеальні для музики, навчання, ігор і подарунків.</p>
+        <div class="pricecard">
+          <div class="price">
+            <div class="old">1 249 ₴</div>
+            <div class="new">690 ₴</div>
+            <div class="hint">Акція лише сьогодні • Безкоштовна доставка</div>
+          </div>
+          <ul class="trust">
+            <li>— Оплата при отриманні</li>
+            <li>— Відправка в день замовлення</li>
+            <li>— Гарантія 6 місяців</li>
+          </ul>
+        </div>
+        <div class="cta">
+          <a href="#order" class="btn btn-primary">Замовити за 690 ₴</a>
+          <a href="#benefits" class="btn btn-ghost">Переваги</a>
+        </div>
+        <div style="margin-top:10px;color:#6b7280;font-size:12px">
+          ✅ Перевірка перед відправкою • 🔄 14 днів обмін/повернення • 🔒 Безпечна оплата
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- Put your main image to ./images/hero-hit-sezonu.webp -->
+        <img src="./images/hero-hit-sezonu.webp" alt="ХІТ СЕЗОНУ — CatEars RGB" />
+      </div>
+    </section>
+
+    <!-- Colors -->
+    <section class="colors">
+      <h2 style="font-size:28px;margin:6px 0 4px">Кольори на вибір</h2>
+      <p style="color:var(--muted);margin:0 0 12px">Чорний, Білий, Блакитний, Рожевий, Фіолетовий</p>
+      <div class="swatches">
+        <div class="swatch black">Чорний</div>
+        <div class="swatch white">Білий</div>
+        <div class="swatch sky">Блакитний</div>
+        <div class="swatch pink">Рожевий</div>
+        <div class="swatch violet">Фіолетовий</div>
+      </div>
+    </section>
+
+    <!-- Benefits + Girl image -->
+    <section id="benefits" class="two-col" style="margin-top:26px">
+      <div class="card">
+        <!-- Put your girl image to ./images/girl-cat-ears.webp -->
+        <img src="./images/girl-cat-ears.webp" alt="CatEars RGB — у затишному домі" style="width:100%;height:auto;border-radius:12px" />
+      </div>
+      <div>
+        <div class="benefits">
+          <div class="benefit">
+            <h3>Чистий стереозвук</h3>
+            <p>Збалансовані високі та насичені низькі частоти для музики, фільмів і ігор.</p>
+          </div>
+          <div class="benefit">
+            <h3>RGB‑підсвічування</h3>
+            <p>М’яке рожево‑блакитне світіння — ефектно у кімнаті, на фото й відео.</p>
+          </div>
+          <div class="benefit">
+            <h3>Комфорт щодня</h3>
+            <p>М’які амбушури + регульоване оголів’я. Не тиснуть навіть після кількох годин.</p>
+          </div>
+          <div class="benefit">
+            <h3>До 10 год автономності</h3>
+            <p>Економний режим живлення. Зарядка USB‑C приблизно за 2 години.</p>
+          </div>
+          <div class="benefit">
+            <h3>Bluetooth 5.0 + AUX</h3>
+            <p>Стабільне з’єднання до 10 м. Є провідний режим для ПК та ноутбука.</p>
+          </div>
+          <div class="benefit">
+            <h3>Гарантія та сервіс</h3>
+            <p>6 місяців офіційної гарантії + 14 днів на обмін/повернення.</p>
+          </div>
+        </div>
+
+        <div class="specs">
+          <div class="spec"><div class="k">10 год</div><div class="v">автономної роботи</div></div>
+          <div class="spec"><div class="k">BT 5.0</div><div class="v">стабільний зв’язок</div></div>
+          <div class="spec"><div class="k">USB‑C</div><div class="v">швидка зарядка</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section style="margin:20px 0">
+      <h2 style="font-size:28px;margin:6px 0 10px">Відгуки покупців</h2>
+      <div class="reviews">
+        <div class="review"><div class="n">Олена, Львів</div><div class="t">Дарувала доньці — захват! Світяться яскраво, звук глибокий. Доставка за 2 дні.</div></div>
+        <div class="review"><div class="n">Максим, Київ</div><div class="t">Виглядають краще ніж на фото. Комфортні, батарея тримає довго.</div></div>
+        <div class="review"><div class="n">Іра, Харків</div><div class="t">Рожеві — бомба. Дитина носить щодня, підсвітка не сліпить.</div></div>
+        <div class="review"><div class="n">Данило, Дніпро</div><div class="t">Підключив без проблем. Є AUX — зручно для ігор.</div></div>
+        <div class="review"><div class="n">Марія, Запоріжжя</div><div class="t">Фіолетові дуже стильні. На голові сидять м’яко, не тиснуть.</div></div>
+        <div class="review"><div class="n">Назар, Тернопіль</div><div class="t">За свої гроші топ. Упаковка як подарунок — не соромно дарувати.</div></div>
+      </div>
+    </section>
+
+    <!-- Order -->
+    <section id="order" style="margin:28px 0">
+      <div class="order">
+        <div>
+          <h2 style="font-size:28px;margin:0 0 6px">Оформити замовлення</h2>
+          <p style="color:var(--muted);margin:0 0 12px">Залиште контакти — менеджер підтвердить колір і доставку. Знижка застосовується автоматично.</p>
+          <form onsubmit="event.preventDefault(); alert('Дякуємо! Заявку прийнято.');">
+            <label style="font-size:12px;color:var(--muted)">Ім'я</label>
+            <input placeholder="Ваше ім'я" />
+            <label style="font-size:12px;color:var(--muted)">Телефон *</label>
+            <input placeholder="+380 XX XXX XX XX" />
+            <label style="font-size:12px;color:var(--muted)">Колір</label>
+            <select>
+              <option>Чорний</option>
+              <option>Білий</option>
+              <option>Блакитний</option>
+              <option>Рожевий</option>
+              <option>Фіолетовий</option>
+            </select>
+            <button class="submit">Замовити за 690 ₴</button>
+            <div style="color:var(--muted);font-size:12px;margin-top:6px">Натискаючи кнопку, ви погоджуєтесь з умовами оферти та політикою конфіденційності.</div>
+          </form>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px">Підсумок замовлення</h3>
+          <ul style="margin:8px 0 12px;color:var(--fg)">
+            <li>CatEars RGB навушники</li>
+            <li>Кабель USB‑C + AUX</li>
+            <li>Гарантія 6 міс • 14 днів на обмін/повернення</li>
+          </ul>
+          <div style="background:#f9fafb;border:1px solid var(--border);border-radius:12px;padding:12px">
+            <div style="color:var(--muted);font-size:12px">Разом до сплати</div>
+            <div style="font-size:28px;font-weight:900;color:#be185d">690 ₴</div>
+            <div style="color:#065f46;font-size:12px">Акція діє до кінця дня</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container grid">
+      <div><b>CatEars RGB</b><br/>Бездротові навушники з підсвічуванням</div>
+      <div><b>Контакти</b><br/>Тел.: +380 00 000 00 00<br/>Viber/Telegram: @catears_shop</div>
+      <div><b>Правова інформація</b><br/>Публічна оферта • Політика конфіденційності</div>
+    </div>
+  </footer>
+</body>
+</html>
