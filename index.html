@@ -3,91 +3,174 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CatEars RGB — ХІТ СЕЗОНУ</title>
-  <meta name="description" content="Бездротові RGB навушники з котячими вушками — стиль, що сяє. Акція — 690 ₴. Доставка по Україні, оплата при отриманні." />
+  <title>Likeria Store — ХІТ СЕЗОНУ</title>
+  <meta name="description" content="Likeria Store — унікальні товари з доставкою по Україні. Зв'яжіться в Telegram @likeriastore або телефонуйте +380985517131. Акція на CatEars RGB — 690 ₴." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://i.pravatar.cc">
   <style>
     :root{
-      --bg1:#fff7f8;
-      --bg2:#fff;
+      --bg1:#fffafa;
+      --bg2:#ffffff;
       --fg:#161616;
-      --brand:#d946ef; /* фуксія */
-      --brand-2:#06b6d4; /* бірюзовий */
       --muted:#6b7280;
       --card:#ffffff;
       --border:#e5e7eb;
-      --accent:#fef3c7;
+
+      /* Брендові та приємні кольори */
+      --brand:#7c3aed;     /* фіолетовий */
+      --brand2:#06b6d4;    /* бірюза */
+      --ctaGlow:#f59e0b;   /* м'яке сяйво CTA */
+      --star:#fbbf24;      /* для зірок */
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--fg);background:linear-gradient(180deg,var(--bg1),var(--bg2));}
+    html,body{
+      margin:0;
+      padding:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--fg);
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    }
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
-    .topbar{background: linear-gradient(90deg,#a21caf,#ef4444,#f59e0b);color:#fff;text-align:center;padding:10px 8px;font-weight:700}
-    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;align-items:center;padding:48px 0}
-    .badge{display:inline-block;background:#fae8ff;color:#86198f;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600}
-    h1{font-size:38px;line-height:1.1;margin:16px 0 8px}
+    .topbar{
+      background: linear-gradient(90deg, #f9a8d4, #f472b6);
+      color:#fff;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      padding:8px 10px;
+      font-weight:600;
+      flex-wrap:wrap;
+      font-size:14px;
+      box-shadow:0 2px 10px rgba(244,114,182,0.4);
+    }
+    .topbar a{color:#fff;text-decoration:underline}
+    .topbar .dot{opacity:.6}
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:28px;
+      align-items:center;
+      padding:34px 0 28px;
+    }
+    .badge{display:inline-flex;gap:6px;align-items:center;background:#f5f3ff;color:#4c1d95;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    h1{font-size:38px;line-height:1.1;margin:14px 0 8px}
     p.lead{font-size:18px;color:var(--muted);margin:0 0 16px}
-    .pricecard{display:flex;gap:16px;align-items:center;margin:16px 0 20px}
-    .price{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 16px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
+
+    .rating{
+      display:flex;align-items:center;gap:8px;margin:6px 0 10px
+    }
+    .rating .stars{display:inline-flex;gap:2px;font-size:18px;color:var(--star)}
+    .rating .score{font-weight:800}
+    .pricecard{display:flex;gap:12px;align-items:center;margin:12px 0 16px;flex-wrap:wrap}
+    .price{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:12px 14px;box-shadow:0 6px 20px rgba(0,0,0,.04)}
     .price .old{color:#9ca3af;text-decoration:line-through;font-size:14px}
-    .price .new{font-size:32px;font-weight:900;color:#be185d}
+    .price .new{font-size:30px;font-weight:900;color:#be185d}
     .price .hint{font-size:12px;color:#047857}
     ul.trust{list-style:none;padding:0;margin:0;color:var(--muted);font-size:14px}
     ul.trust li{margin:2px 0}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;font-weight:700;text-decoration:none}
-    .btn-primary{background:#111827;color:#fff}
+
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:14px;font-weight:800;text-decoration:none;transition:.2s transform ease,.2s box-shadow ease}
+    .btn:active{transform:scale(.98)}
+    .btn-primary{
+      background: linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#fff;
+      box-shadow: 0 10px 30px rgba(124,58,237,.25), 0 0 0 6px rgba(245,158,11,.15);
+      position:relative;
+      border:none;
+    }
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(124,58,237,.32),0 0 0 8px rgba(245,158,11,.18)}
     .btn-ghost{background:#fff;border:1px solid var(--border);color:#111827}
-    .hero-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:28px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+
+    .hero-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:28px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
     .hero-card img{width:100%;height:auto;display:block;border-radius:16px}
+
+    /* Секції — компактніші відступи */
+    section{scroll-margin-top:80px}
     .colors{padding:8px 0 0}
     .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;max-width:560px}
-    .swatch{height:48px;border-radius:12px;border:1px solid var(--border);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
+    .swatch{height:44px;border-radius:12px;border:1px solid var(--border);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700}
     .swatch.white{color:#111827;background:#fff}
     .swatch.black{background:#000}
     .swatch.sky{background:#38bdf8}
     .swatch.pink{background:#ec4899}
     .swatch.violet{background:#8b5cf6}
-    .benefits{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:28px 0}
-    .benefit{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+
+    .two-col{display:grid;grid-template-columns:0.9fr 1.1fr;gap:22px;align-items:start}
+    .card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .benefits{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 0}
     .benefit h3{margin:0 0 6px;font-size:16px}
     .benefit p{margin:0;color:var(--muted);font-size:14px}
-    .two-col{display:grid;grid-template-columns:0.9fr 1.1fr;gap:28px;align-items:start}
-    .card{background:#fff;border:1px solid var(--border);border-radius:18px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-    .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 0}
-    .spec{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;text-align:center}
-    .spec .k{font-size:26px;font-weight:900;color:#be185d}
+
+    .specs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:12px 0}
+    .spec{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;text-align:center}
+    .spec .k{font-size:24px;font-weight:900;color:#be185d}
     .spec .v{font-size:12px;color:var(--muted)}
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .review{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px}
-    .review .n{font-weight:800}
-    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .order{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .order input,.order select{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);font-size:14px}
-    .order .submit{width:100%;padding:12px 16px;border-radius:14px;background:#111827;color:#fff;font-weight:800}
-    footer{background:#f3f4f6;border-top:1px solid var(--border);margin-top:32px}
-    footer .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px 0}
+
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .review{background:#fff;border:1px solid var(--border);border-radius:14px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+    .review img{width:44px;height:44px;border-radius:999px;border:1px solid var(--border)}
+    .review .name{font-weight:800}
+    .review .stars{color:var(--star);font-size:14px}
+    .review .text{grid-column: 1 / -1;color:#374151}
+
+    .order{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .order input,.order select, .order textarea{width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);font-size:14px}
+    .order .submit{width:100%;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;font-weight:900;border:none;box-shadow:0 10px 30px rgba(124,58,237,.25)}
+    .order .submit:hover{transform:translateY(-1px);box-shadow:0 12px 34px rgba(124,58,237,.32)}
+
+    footer{background:#f3f4f6;border-top:1px solid var(--border);margin-top:28px}
+    footer .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 0;font-size:14px}
+    footer a{color:#2563eb;text-decoration:none}
+    footer small{display:block;color:#6b7280;margin-top:6px}
+
+    .legal{background:#ffffff;border-top:1px solid var(--border);padding:18px 0}
+    .legal .doc{max-width:900px;margin:0 auto;color:#374151;font-size:14px}
+
+    /* адаптив */
     @media (max-width: 980px){
       .hero,.two-col,.order{grid-template-columns:1fr}
       .benefits{grid-template-columns:1fr}
       .reviews{grid-template-columns:1fr 1fr}
-      .faq{grid-template-columns:1fr}
       .specs{grid-template-columns:1fr 1fr 1fr}
     }
     @media (max-width: 640px){
       h1{font-size:30px}
       .reviews,.specs{grid-template-columns:1fr 1fr}
+      .swatches{grid-template-columns:repeat(3,1fr)}
     }
   </style>
 </head>
 <body>
-  <div class="topbar">ХІТ СЕЗОНУ • ЗНИЖКА до −45% • Лише сьогодні</div>
+  <!-- Верхня панель з контактами та швидкими переходами -->
+  <div class="topbar">
+    <span>⭐ ХІТ СЕЗОНУ — ЗНИЖКА до −45%</span>
+    <span class="dot">•</span>
+    <span>Тел.: <a href="tel:+380985517131">+380985517131</a></span>
+    <span class="dot">•</span>
+    <span>Instagram: <a href="https://instagram.com/likeriastore" target="_blank" rel="noopener">@likeriastore</a></span>
+    <span class="dot">•</span>
+    <span>Telegram: <a href="https://t.me/likeriastore" target="_blank" rel="noopener">@likeriastore</a></span>
+  </div>
 
   <main class="container">
     <!-- Hero -->
     <section class="hero">
       <div>
-        <span class="badge">Новинка 2025 • RGB Cat Ears</span>
+        <span class="badge">Новинка • Likeria Store</span>
         <h1>Бездротові навушники <br/>CatEars RGB</h1>
-        <p class="lead">Стиль, що сяє: яскраве RGB‑підсвічування, комфорт на щодень та чистий стереозвук. Ідеальні для музики, навчання, ігор і подарунків.</p>
+        <p class="lead">Стиль, що сяє: яскраве RGB-підсвічування, комфорт на щодень та чистий стереозвук. Ідеальні для музики, навчання, ігор і подарунків.</p>
+
+        <div class="rating">
+          <div class="stars" aria-label="Рейтинг 4.7 з 5">★★★★★</div>
+          <div class="score">4.7/5</div>
+          <div class="count" style="color:var(--muted)">на основі 1 200+ відгуків</div>
+        </div>
+
         <div class="pricecard">
           <div class="price">
             <div class="old">1 249 ₴</div>
@@ -100,24 +183,24 @@
             <li>— Гарантія 6 місяців</li>
           </ul>
         </div>
+
         <div class="cta">
           <a href="#order" class="btn btn-primary">Замовити за 690 ₴</a>
-          <a href="#benefits" class="btn btn-ghost">Переваги</a>
+          <a href="https://t.me/likeriastore" target="_blank" rel="noopener" class="btn btn-ghost">Написати в Telegram</a>
         </div>
         <div style="margin-top:10px;color:#6b7280;font-size:12px">
           ✅ Перевірка перед відправкою • 🔄 14 днів обмін/повернення • 🔒 Безпечна оплата
         </div>
       </div>
       <div class="hero-card">
-        <!-- Put your main image to ./images/hero-hit-sezonu.webp -->
         <img src="./images/hero-hit-sezonu.webp" alt="ХІТ СЕЗОНУ — CatEars RGB" />
       </div>
     </section>
 
     <!-- Colors -->
     <section class="colors">
-      <h2 style="font-size:28px;margin:6px 0 4px">Кольори на вибір</h2>
-      <p style="color:var(--muted);margin:0 0 12px">Чорний, Білий, Блакитний, Рожевий, Фіолетовий</p>
+      <h2 style="font-size:26px;margin:6px 0 4px">Кольори на вибір</h2>
+      <p style="color:var(--muted);margin:0 0 10px">Чорний, Білий, Блакитний, Рожевий, Фіолетовий</p>
       <div class="swatches">
         <div class="swatch black">Чорний</div>
         <div class="swatch white">Білий</div>
@@ -128,35 +211,34 @@
     </section>
 
     <!-- Benefits + Girl image -->
-    <section id="benefits" class="two-col" style="margin-top:26px">
+    <section id="benefits" class="two-col" style="margin-top:22px">
       <div class="card">
-        <!-- Put your girl image to ./images/girl-cat-ears.webp -->
         <img src="./images/girl-cat-ears.webp" alt="CatEars RGB — у затишному домі" style="width:100%;height:auto;border-radius:12px" />
       </div>
       <div>
         <div class="benefits">
           <div class="benefit">
-            <h3>Чистий стереозвук</h3>
+            <h3>Чистий стереозвук 🎧</h3>
             <p>Збалансовані високі та насичені низькі частоти для музики, фільмів і ігор.</p>
           </div>
           <div class="benefit">
-            <h3>RGB‑підсвічування</h3>
-            <p>М’яке рожево‑блакитне світіння — ефектно у кімнаті, на фото й відео.</p>
+            <h3>RGB-підсвічування ✨</h3>
+            <p>М’яке рожево-блакитне світіння — ефектно у кімнаті, на фото й відео.</p>
           </div>
           <div class="benefit">
-            <h3>Комфорт щодня</h3>
+            <h3>Комфорт щодня ☁️</h3>
             <p>М’які амбушури + регульоване оголів’я. Не тиснуть навіть після кількох годин.</p>
           </div>
           <div class="benefit">
-            <h3>До 10 год автономності</h3>
-            <p>Економний режим живлення. Зарядка USB‑C приблизно за 2 години.</p>
+            <h3>До 10 год автономності 🔋</h3>
+            <p>Економний режим живлення. Зарядка USB-C приблизно за 2 години.</p>
           </div>
           <div class="benefit">
-            <h3>Bluetooth 5.0 + AUX</h3>
+            <h3>Bluetooth 5.0 + AUX 🔗</h3>
             <p>Стабільне з’єднання до 10 м. Є провідний режим для ПК та ноутбука.</p>
           </div>
           <div class="benefit">
-            <h3>Гарантія та сервіс</h3>
+            <h3>Гарантія та сервіс 🛡️</h3>
             <p>6 місяців офіційної гарантії + 14 днів на обмін/повернення.</p>
           </div>
         </div>
@@ -164,58 +246,117 @@
         <div class="specs">
           <div class="spec"><div class="k">10 год</div><div class="v">автономної роботи</div></div>
           <div class="spec"><div class="k">BT 5.0</div><div class="v">стабільний зв’язок</div></div>
-          <div class="spec"><div class="k">USB‑C</div><div class="v">швидка зарядка</div></div>
+          <div class="spec"><div class="k">USB-C</div><div class="v">швидка зарядка</div></div>
         </div>
       </div>
     </section>
 
     <!-- Reviews -->
-    <section style="margin:20px 0">
-      <h2 style="font-size:28px;margin:6px 0 10px">Відгуки покупців</h2>
+    <section style="margin:18px 0">
+      <h2 style="font-size:26px;margin:6px 0 8px">Відгуки покупців</h2>
       <div class="reviews">
-        <div class="review"><div class="n">Олена, Львів</div><div class="t">Дарувала доньці — захват! Світяться яскраво, звук глибокий. Доставка за 2 дні.</div></div>
-        <div class="review"><div class="n">Максим, Київ</div><div class="t">Виглядають краще ніж на фото. Комфортні, батарея тримає довго.</div></div>
-        <div class="review"><div class="n">Іра, Харків</div><div class="t">Рожеві — бомба. Дитина носить щодня, підсвітка не сліпить.</div></div>
-        <div class="review"><div class="n">Данило, Дніпро</div><div class="t">Підключив без проблем. Є AUX — зручно для ігор.</div></div>
-        <div class="review"><div class="n">Марія, Запоріжжя</div><div class="t">Фіолетові дуже стильні. На голові сидять м’яко, не тиснуть.</div></div>
-        <div class="review"><div class="n">Назар, Тернопіль</div><div class="t">За свої гроші топ. Упаковка як подарунок — не соромно дарувати.</div></div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=12" alt="Олена аватар"/>
+          <div>
+            <div class="name">Олена, Львів</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="text">Дарувала доньці — захват! ✨ Світяться яскраво, звук глибокий. Доставка за 2 дні.</div>
+        </div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=5" alt="Максим аватар"/>
+          <div>
+            <div class="name">Максим, Київ</div>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <div class="text">Виглядають краще ніж на фото. Комфортні, батарея тримає довго 🔋</div>
+        </div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=32" alt="Іра аватар"/>
+          <div>
+            <div class="name">Іра, Харків</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="text">Рожеві — бомба 💖. Дитина носить щодня, підсвітка не сліпить.</div>
+        </div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=22" alt="Данило аватар"/>
+          <div>
+            <div class="name">Данило, Дніпро</div>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <div class="text">Підключив без проблем. Є AUX — зручно для ігор 🕹️</div>
+        </div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=48" alt="Марія аватар"/>
+          <div>
+            <div class="name">Марія, Запоріжжя</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="text">Фіолетові дуже стильні. На голові сидять м’яко, не тиснуть 😍</div>
+        </div>
+        <div class="review">
+          <img src="https://i.pravatar.cc/88?img=15" alt="Назар аватар"/>
+          <div>
+            <div class="name">Назар, Тернопіль</div>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="text">За свої гроші топ 💯. Упаковка як подарунок — не соромно дарувати.</div>
+        </div>
       </div>
     </section>
 
     <!-- Order -->
-    <section id="order" style="margin:28px 0">
+    <section id="order" style="margin:22px 0">
       <div class="order">
         <div>
-          <h2 style="font-size:28px;margin:0 0 6px">Оформити замовлення</h2>
-          <p style="color:var(--muted);margin:0 0 12px">Залиште контакти — менеджер підтвердить колір і доставку. Знижка застосовується автоматично.</p>
-          <form onsubmit="event.preventDefault(); alert('Дякуємо! Заявку прийнято.');">
+          <h2 style="font-size:26px;margin:0 0 6px">Оформити замовлення</h2>
+          <p style="color:var(--muted);margin:0 0 10px">Залиште контакти — менеджер підтвердить колір і доставку. Знижка застосовується автоматично.</p>
+
+          <form id="orderForm">
             <label style="font-size:12px;color:var(--muted)">Ім'я</label>
-            <input placeholder="Ваше ім'я" />
+            <input name="name" placeholder="Ваше ім'я" />
+
             <label style="font-size:12px;color:var(--muted)">Телефон *</label>
-            <input placeholder="+380 XX XXX XX XX" />
+            <input name="phone" placeholder="+380985517131" value="+380985517131" required />
+
             <label style="font-size:12px;color:var(--muted)">Колір</label>
-            <select>
+            <select name="color">
               <option>Чорний</option>
               <option>Білий</option>
               <option>Блакитний</option>
               <option>Рожевий</option>
               <option>Фіолетовий</option>
             </select>
-            <button class="submit">Замовити за 690 ₴</button>
-            <div style="color:var(--muted);font-size:12px;margin-top:6px">Натискаючи кнопку, ви погоджуєтесь з умовами оферти та політикою конфіденційності.</div>
+
+            <label style="font-size:12px;color:var(--muted)">Коментар</label>
+            <textarea name="comment" rows="3" placeholder="Наприклад: Нова Пошта, відділення № ..."></textarea>
+
+            <button type="submit" class="submit">Замовити за 690 ₴</button>
+            <div style="color:var(--muted);font-size:12px;margin-top:6px">
+              Натискаючи кнопку, ви погоджуєтесь з <a href="#offer">умовами оферти</a> та <a href="#privacy">політикою конфіденційності</a>.
+            </div>
           </form>
+
+          <div style="margin-top:10px">
+            <a href="https://t.me/likeriastore" target="_blank" rel="noopener" class="btn btn-ghost">Або напишіть нам у Telegram</a>
+          </div>
         </div>
+
         <div class="card">
           <h3 style="margin:0 0 6px">Підсумок замовлення</h3>
           <ul style="margin:8px 0 12px;color:var(--fg)">
             <li>CatEars RGB навушники</li>
-            <li>Кабель USB‑C + AUX</li>
+            <li>Кабель USB-C + AUX</li>
             <li>Гарантія 6 міс • 14 днів на обмін/повернення</li>
           </ul>
           <div style="background:#f9fafb;border:1px solid var(--border);border-radius:12px;padding:12px">
             <div style="color:var(--muted);font-size:12px">Разом до сплати</div>
-            <div style="font-size:28px;font-weight:900;color:#be185d">690 ₴</div>
+            <div style="font-size:26px;font-weight:900;color:#be185d">690 ₴</div>
             <div style="color:#065f46;font-size:12px">Акція діє до кінця дня</div>
+          </div>
+          <div style="margin-top:10px;color:#6b7280;font-size:12px">
+            Контакт: <a href="tel:+380985517131">+380985517131</a> • Instagram <a href="https://instagram.com/likeriastore" target="_blank">@likeriastore</a> • Telegram <a href="https://t.me/likeriastore" target="_blank">@likeriastore</a>
           </div>
         </div>
       </div>
@@ -224,10 +365,91 @@
 
   <footer>
     <div class="container grid">
-      <div><b>CatEars RGB</b><br/>Бездротові навушники з підсвічуванням</div>
-      <div><b>Контакти</b><br/>Тел.: +380 00 000 00 00<br/>Viber/Telegram: @catears_shop</div>
-      <div><b>Правова інформація</b><br/>Публічна оферта • Політика конфіденційності</div>
+      <div><b>Likeria Store</b><br/>Унікальні товари з швидкою доставкою по Україні.</div>
+      <div>
+        <b>Контакти</b><br/>
+        Тел.: <a href="tel:+380985517131">+380985517131</a><br/>
+        Instagram: <a href="https://instagram.com/likeriastore" target="_blank">@likeriastore</a><br/>
+        Telegram: <a href="https://t.me/likeriastore" target="_blank">@likeriastore</a>
+      </div>
+      <div>
+        <b>Правова інформація</b><br/>
+        <a id="offer" href="#offer">Публічна оферта</a> • <a id="privacy" href="#privacy">Політика конфіденційності</a>
+        <small>© <span id="year"></span> Likeria Store. Всі права захищені.</small>
+      </div>
     </div>
   </footer>
+
+  <!-- Простий текст оферти та політики для модерації (рекомендовано мати окремі сторінки) -->
+  <section class="legal" id="offer">
+    <div class="container doc">
+      <h3>Публічна оферта</h3>
+      <p>Цей сайт є пропозицією укласти договір купівлі-продажу товарів дистанційним способом. Оформлення замовлення на сайті підтверджує Вашу згоду з умовами цієї оферти, цінами, способами оплати та доставки. Продавець залишає за собою право оновлювати умови без попереднього повідомлення.</p>
+      <p><b>Оплата:</b> при отриманні або інші способи за домовленістю. <b>Доставка:</b> по Україні службами перевізників. <b>Повернення:</b> протягом 14 днів згідно із Законом України «Про захист прав споживачів» за умови збереження товарного вигляду.</p>
+      <p>Контакти для звернень: <a href="tel:+380985517131">+380985517131</a>, Telegram: <a href="https://t.me/likeriastore" target="_blank">@likeriastore</a>.</p>
+    </div>
+  </section>
+  <section class="legal" id="privacy">
+    <div class="container doc">
+      <h3>Політика конфіденційності</h3>
+      <p>Ми обробляємо персональні дані (ім'я, телефон, адресу доставки) виключно з метою оформлення та виконання замовлення. Дані не передаються третім особам, окрім служб доставки та платіжних провайдерів у межах виконання замовлення.</p>
+      <p>Надаючи дані, Ви погоджуєтесь на їх обробку. Для відкликання згоди або видалення даних звертайтесь за номером <a href="tel:+380985517131">+380985517131</a> або в Telegram <a href="https://t.me/likeriastore" target="_blank">@likeriastore</a>.</p>
+    </div>
+  </section>
+
+  <script>
+    // поточний рік у футері
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Надсилання заявки у Telegram:
+    // ВАРІАНТ 1: відкриваємо діалог з магазином у Telegram з підготовленим текстом
+    // ВАРІАНТ 2 (опціонально): через Telegram Bot API — замініть YOUR_BOT_TOKEN та YOUR_CHAT_ID, якщо у вас є бот.
+
+    const TG_LINK = "https://t.me/likeriastore";
+
+    const TG_BOT_TOKEN = "YOUR_BOT_TOKEN"; // <- замініть, якщо є бот
+    const TG_CHAT_ID = "YOUR_CHAT_ID";     // <- замініть, якщо є бот (ваш user ID або ID чату)
+
+    const form = document.getElementById('orderForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const msg = `🛒 Нове замовлення з сайту Likeria Store:%0A%0A` +
+                  `👤 Ім'я: ${encodeURIComponent(data.name || "-")}%0A` +
+                  `📞 Телефон: ${encodeURIComponent(data.phone)}%0A` +
+                  `🎨 Колір: ${encodeURIComponent(data.color || "-")}%0A` +
+                  `💬 Коментар: ${encodeURIComponent(data.comment || "-")}`;
+
+      // Якщо вказаний токен бота — спробуємо надіслати через Bot API
+      if (TG_BOT_TOKEN !== "YOUR_BOT_TOKEN" && TG_CHAT_ID !== "YOUR_CHAT_ID") {
+        try {
+          const resp = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: TG_CHAT_ID, text: decodeURIComponent(msg), parse_mode: "HTML" })
+          });
+          if (resp.ok) {
+            alert("Дякуємо! Заявку надіслано у Telegram.");
+            form.reset();
+            return;
+          }
+        } catch (err) {
+          // падаємо на fallback нижче
+        }
+      }
+
+      // Fallback: відкриваємо діалог з магазином у Telegram з підготовленим текстом
+      window.open(`${TG_LINK}?text=${msg}`, "_blank");
+      alert("Дякуємо! Відкриється Telegram для відправки повідомлення.");
+      form.reset();
+    });
+  </script>
 </body>
 </html>
+
+  
+      
+          
+       
+       
+       
